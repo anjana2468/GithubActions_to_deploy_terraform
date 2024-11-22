@@ -16,19 +16,23 @@ This project demonstrates how to use Terraform to provision AWS infrastructure, 
 
 ## Setup
 
-### 1. Clone the Repository
+### 1. Configure aws credentials
+aws configure
 
-Clone the repository to your local machine:
+Add the following secrets:
+AWS_ACCESS_KEY_ID: Your AWS access key ID.
+AWS_SECRET_ACCESS_KEY: Your AWS secret access key.
+AWS_SESSION_TOKEN: Your temporary AWS session token.
+AWS_DEFAULT_REGION: Your preferred AWS region (e.g., us-west-2).
 
-```bash
+2. ## Clone the repository to your local machine:
 git clone https://github.com/anjana2468/GithubActions_to_deploy_terraform.git
 cd terraform-aws-pipeline
 
-2. Configure AWS Credentials
-aws configure
+3. ## git add .
 
-3. Initialize Terraform
-terraform init
+4. ## git commit -m "Initial commit"
 
-4. Apply the Terraform Configuration 
-terraform apply
+5. ## git push
+
+
