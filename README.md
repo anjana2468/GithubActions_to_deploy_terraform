@@ -72,7 +72,7 @@ The `terraform.yml` workflow (inside .github/workflows/) is triggered when you p
 - (Optional) `Apply`	           Actually creates/updates infrastructure (commented out for safety)
 - (Optional) `Destroy`           Deletes all infrastructure (use cautiously!)
 
-##Required Secrets
+## Required Secrets
 ### Secret Name	                 Purpose
 `AWS_ACCESS_KEY_ID`	               Identifies the IAM user or role
 
