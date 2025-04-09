@@ -63,17 +63,17 @@ What the Workflow Does
 
 The `terraform.yml` workflow (inside .github/workflows/) is triggered when you push changes to the main branch. Here's what each step does:
 
-Step	Purpose
-- Checkout	Pulls your code into the GitHub runner
-- Setup Terraform	Installs Terraform on the GitHub runner
-- Terraform Init	Initializes Terraform and configures the backend (S3, in this case)
-- Terraform Plan	Shows what will be created/changed/destroyed before applying
-- (Optional) Apply	Actually creates/updates infrastructure (commented out for safety)
-- (Optional) Destroy	Deletes all infrastructure (use cautiously!)
+###Step	                      ###Purpose
+- `Checkout`	                   Pulls your code into the GitHub runner
+- `Setup`                        Terraform	Installs Terraform on the GitHub runner
+- `Terraform Init`	             Initializes Terraform and configures the backend (S3, in this case)
+- `Terraform Plan`	             Shows what will be created/changed/destroyed before applying
+- (Optional) `Apply`	           Actually creates/updates infrastructure (commented out for safety)
+- (Optional) `Destroy`           Deletes all infrastructure (use cautiously!)
 
-Required Secrets
-Secret Name	Purpose
-AWS_ACCESS_KEY_ID	Identifies the IAM user or role
-AWS_SECRET_ACCESS_KEY	Secret key that works with the access key to authorize actions
+##Required Secrets
+###Secret Name	                ###Purpose
+`AWS_ACCESS_KEY_ID`	               Identifies the IAM user or role
+`AWS_SECRET_ACCESS_KEY`            Secret key that works with the access key to authorize actions
 
 
