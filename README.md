@@ -38,31 +38,38 @@ This project provisions a basic AWS infrastructure using Terraform. It includes:
 How to use:
 
 1. ## Clone the repository to your local machine:
+```
 git clone https://github.com/anjana2468/GithubActions_to_deploy_terraform.git
 cd GithubActions_to_deploy_terraform
-
+```
 2. Initialize Terraform
+```
 terraform init
-
-3. Plan Infrastructure
+```
+4. Plan Infrastructure
+```
 terraform plan
-
-4. Apply Infrastructure
+```
+6. Apply Infrastructure
+```
 terraform apply -auto-approve
+```
 
-5. (Optional) Destroy Infrastructure
+8. (Optional) Destroy Infrastructure
+```
 terraform destroy -auto-approve
-
+```
 What the Workflow Does
-The terraform.yml workflow (inside .github/workflows/) is triggered when you push changes to the main branch. Here's what each step does:
+
+The `terraform.yml` workflow (inside .github/workflows/) is triggered when you push changes to the main branch. Here's what each step does:
 
 Step	Purpose
-Checkout	Pulls your code into the GitHub runner
-Setup Terraform	Installs Terraform on the GitHub runner
-Terraform Init	Initializes Terraform and configures the backend (S3, in this case)
-Terraform Plan	Shows what will be created/changed/destroyed before applying
-(Optional) Apply	Actually creates/updates infrastructure (commented out for safety)
-(Optional) Destroy	Deletes all infrastructure (use cautiously!)
+- Checkout	Pulls your code into the GitHub runner
+- Setup Terraform	Installs Terraform on the GitHub runner
+- Terraform Init	Initializes Terraform and configures the backend (S3, in this case)
+- Terraform Plan	Shows what will be created/changed/destroyed before applying
+- (Optional) Apply	Actually creates/updates infrastructure (commented out for safety)
+- (Optional) Destroy	Deletes all infrastructure (use cautiously!)
 
 Required Secrets
 Secret Name	Purpose
