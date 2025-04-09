@@ -78,4 +78,8 @@ The `terraform.yml` workflow (inside .github/workflows/) is triggered when you p
 
 `AWS_SECRET_ACCESS_KEY`            Secret key that works with the access key to authorize actions
 
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request.
+
 
