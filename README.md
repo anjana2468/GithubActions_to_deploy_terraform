@@ -16,23 +16,45 @@ This project demonstrates how to use Terraform to provision AWS infrastructure, 
 
 ## Setup
 
-### 1. Configure aws credentials
-aws configure
+# AWS Infrastructure with Terraform
 
-Add the following secrets:
-AWS_ACCESS_KEY_ID: Your AWS access key ID.
-AWS_SECRET_ACCESS_KEY: Your AWS secret access key.
-AWS_SESSION_TOKEN: Your temporary AWS session token.
-AWS_DEFAULT_REGION: Your preferred AWS region (e.g., us-west-2).
+This project provisions a basic AWS infrastructure using Terraform. It includes:
+- A custom VPC
+- A public subnet
+- An internet gateway
+- A route table with internet access
+- A security group allowing SSH and HTTP
+- An EC2 instance in the public subnet
 
-2. ## Clone the repository to your local machine:
+## 🧱 Resources Created
+
+- **VPC**: Custom VPC with CIDR `10.0.0.0/16`
+- **Subnet**: Public subnet in `us-west-2a` (`10.0.1.0/24`)
+- **Internet Gateway**: For internet access
+- **Route Table**: Routes `0.0.0.0/0` to the IGW
+- **Security Group**: Allows:
+  - SSH (port 22)
+  - HTTP (port 80)
+- **EC2 Instance**: Amazon Linux 2 AMI (`t2.micro`)
+
+How to use:
+
+1. ## Clone the repository to your local machine:
 git clone https://github.com/anjana2468/GithubActions_to_deploy_terraform.git
-cd terraform-aws-pipeline
+cd GithubActions_to_deploy_terraform
 
-3. ## git add .
+2. Initialize Terraform
+terraform init
 
-4. ## git commit -m "Initial commit"
+3. Plan Infrastructure
+terraform plan
 
-5. ## git push
+4. Apply Infrastructure
+terraform apply -auto-approve
+
+5. (Optional) Destroy Infrastructure
+terraform destroy -auto-approve
+
+
 
 
